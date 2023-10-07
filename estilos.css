@@ -1,0 +1,203 @@
+body {
+    padding:0px;
+    margin:0px;
+ }
+
+
+.encabezado {grid-area: header;}
+.barra-menu {grid-area: menu1;}
+.derecha    {
+    margin-top: 5%;
+    grid-area: der;
+    padding:15px;
+}
+.izquierda  {
+    grid-area: izq;
+    padding:15px;
+    text-align: center;
+}
+.principal  {
+    margin-top: 5%;
+    grid-area: centro;
+    padding:15px;
+    text-align: center;
+
+}
+.imagen{
+    margin-top: 5%;
+    grid-area: img;
+    text-align: right;
+}
+.abajo{
+    grid-area: abaj;
+}
+.abaj2{
+    grid-area: abaj2;
+    text-align: center;
+    margin: 20%;
+}
+.pie        {grid-area: footer;}
+
+.foto{
+    width: 200px;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+/*------------------------------------------------------*/
+/* Contenedor grid (Tamaño grande)
+/*------------------------------------------------------*/
+.contenedor {
+    display: grid;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    /* cuatro filas y 3 columnas */
+    grid-template: auto auto auto auto auto auto/ auto auto auto;
+    gap:1px;
+    grid-template-areas:
+        "header header header"
+        "menu1 menu1 menu1" 
+        "img centro der"
+        "abaj abaj abaj"
+        "izq izq izq"
+        "footer footer footer" ;
+    
+}
+
+/*------------------------------------------------------*/
+/* Contenedor grid (Tablet)
+/*------------------------------------------------------*/
+@media (max-width: 1280px) {
+    .contenedor {
+        display: grid;
+        /* 5 filas y 3 columnas */
+        grid-template: auto auto auto auto auto / 20% auto;
+        gap:1px;
+        grid-template-areas:
+            "header header"
+            "menu1 menu1" 
+            "centro izq"
+            "der der"
+            "footer footer" ;
+
+    }
+}
+
+
+/*------------------------------------------------------*/
+/* Contenedor grid (Telefono)
+/*------------------------------------------------------*/
+@media (max-width: 600px) {
+    .contenedor {
+        display: grid;
+        /* 6 filas y 1 columnas */
+        grid-template: auto auto auto auto auto auto / 1fr;
+        gap:1px;
+        grid-template-areas:
+            "header"
+            "menu1"
+            "centro" 
+            "izq"
+            "der"
+            "footer" ;
+
+    }
+}
+
+
+/*------------------------------------------------------*/
+/* Estilos de la barra de menu
+/*------------------------------------------------------*/
+
+nav {
+    background: rgb(208, 173, 212);
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: white;
+    display: block;    padding:10px;
+    text-align: center;
+    /* background-color: #47478d; */
+    border-radius: 10px;
+    text-decoration: none;
+} 
+
+nav li a:hover {   
+    background-color: #c43f91;
+    animation: 0.9s infinite botonanim;
+}
+
+@keyframes botonanim {
+    0% {transform:scaleX(1.0);
+
+    }
+
+    50% {transform:scaleX(1.1);
+    }
+
+    100% {transform:scaleX(1.0);
+ 
+    }
+    
+}
+
+/*-------------------------------------------------------------------*/
+/* Estilos del footer
+/*-------------------------------------------------------------------*/
+.pie {
+    background: rgb(208, 173, 212);
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px
+}
+
+.iconos {
+    display: flex;
+    column-gap: 10px;
+}
+
+.iconos > a {
+    color:white;
+    font-size: 24px;
+}
+
+/*-------------------------------------------------------------------*/
+/* Estilos del header
+/*-------------------------------------------------------------------*/
+.encabezado {
+    display: flex;
+    background: rgb(208, 173, 212);
+    color: white;
+    padding: 10px;
+
+}
+
+#logo {
+    width: 100px;
+}
+
+.enc-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+fieldset{
+    text-align: center;
+    border: none;
+
+}
