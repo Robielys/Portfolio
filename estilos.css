@@ -201,3 +201,95 @@ fieldset{
     border: none;
 
 }
+.formulario {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.form {
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(15, 13, 13, 0.8);
+    background: white;
+}
+
+form .grupo {
+    position: relative;
+    margin: 20px;
+}
+
+input {
+    padding: 5px 5px 5px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+button {
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #ffffff;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: black;
+}
+h1 {
+    font-family : "Lobster", sans-serif;
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+    .card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 150px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+.card-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card-description {
+    margin: 0 10px 10px 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Remove link style from card-description */
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+    /* Ensure card-description is not underlined */
+    .card a .card-description {
+        text-decoration: none;
+    }
+}

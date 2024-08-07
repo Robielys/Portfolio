@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <title>Bienvenidos</title>
 </head>
 
@@ -21,6 +25,7 @@
             <ul type="square">
                 <li><a href="#adm">Acerca de mi</a></li>
                 <li> <a href="#conoc">Conocimientos</a></li>
+                <li> <a href="#proy">Proyectos</a></li>
                 <li><a href="#red">Redes</a></li>
                 <li><a href="#cont">Contacto</a></li>
 
@@ -28,40 +33,43 @@
         </nav>
 
         <aside class="izquierda">
-            <h2 style="color:#61135d">Dejame tu consulta ✍🏻</h2>
-            <ul>
-                <fieldset class="izquierda">
-                    <form id="cont" action="">
-                        <label for="nom">Nombre</label>
-                        <input type="text" name="nombre" id="nom" placeholder="Escriba su nombre">
-                        <br>
-                        <br>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                        <br>
-                        <br>
-                        <label for="telef">Telefono</label>
-                        <input type="number" name="telef" id="telef">
-                        <br>
-                        <br>
+            <section class="formulario">
+
+                <form id="cont" action="" class="form">
+                    <div class="grupo">
+                        <h2 class="titulo2">Dejame tu consulta</h2>
+                        <label for="nom">
+                            Nombre</label>
+                            <input type="text" name="nombre" id="nom" placeholder="ejemplo Daniel Gonzales">
+                    </div>
+                    <div class="grupo">
+                        <label for="nom">
+                            Email</label>
+                            <input type="text" name="nombre" id="nom" placeholder="ejemlo@gmail.com">
+                    </div>
+                    <div class="grupo">
+                        <label for="nom">
+                            Telefono</label>
+                            <input type="text" name="nombre" id="nom" placeholder="ejemplo 112598743">
+                    </div>
+                    <div class="grupo">
                         <label for="mensj">Mensaje</label><br>
                         <textarea name="mensj" id="mensj" cols="20" rows="10"></textarea>
-                        <br>
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Reiniciar">
-                    </form>
-                </fieldset>
-            </ul>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+
         </aside>
 
         <!-- Contenido principal -->
         <article class="principal">
             <h3 style="color:#61135d; ">Hola 😀</h3>
             <p> Hola, mi nombre es Robielys Ortiz,</p>
-             <p>soy estudiante de la tecnicatura en</p>
-             <p> programación en la UTN Facultad Regional</p>
-             <p> de Pacheco, actualmente trabajo en</p>
-             <p>control de calidad en una empresa de</p>
+             <p>soy Programadora, graduada </p>
+             <p> en la UTN Facultad Regional</p>
+             <p> de Pacheco, actualmente soy supervisora del </p>
+             <p>Sistema de control de calidad en una empresa de</p>
              <p>plástico y como tester de manera freelance..</p>
         </article>
         <article class="imagen">
@@ -69,8 +77,25 @@
         </article>
         <article class="abajo">
             <div class="abaj2">
-            <h3 style="color:#61135d; ">Proyectos</h3>
-            <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-codigo-barras_114360-7032.jpg" width="100"></div>
+                <h3 id ="proy" style="color:#61135d; ">Proyectos</h3>
+                <div class="card-container">
+                    <a href="https://github.com/Robielys/SistemaDeStock" target="_blank" class="card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4947/4947506.png" alt="Proyecto 1">
+                        <div class="card-title">Gestión de Stock</div>
+                        <p class="card-description">Este proyecto es una aplicación en consola de gestión de stock con C++</p>
+                    </a>
+                    <a href="https://github.com/HoracioBarral/Ecommerce" target="_blank" class="card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991406.png" alt="Proyecto 2">
+                        <div class="card-title">Ecommerce</div>
+                        <p class="card-description">Ecommerce usando .NET C# y SQL</p>
+                    </a>
+                    <a href="https://github.com/FacundoPalmieri/TPINT_GRUPO_13_LAB4" target="_blank" class="card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4519/4519104.png" alt="Proyecto 3">
+                        <div class="card-title">App Bancaria</div>
+                        <p class="card-description">Web bancaria con JAVA, Js y MySQL</p>
+                    </a>
+                </div>
+            </div>
         </article>
 
         <article class="derecha">
@@ -89,23 +114,42 @@
                         <div><img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png" width="100">
                         </div>
                     </td>
+                    <td>
+                        <div><img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" width="100"
+
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <div><img src="https://cdn-icons-png.flaticon.com/128/5968/5968267.png" width="100">
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968267.png" width="100">
                         </div>
                     </td>
                     <td>
-                        <div><img src="https://cdn-icons-png.flaticon.com/128/5968/5968242.png" width="100">
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968242.png" width="100">
                         </div>
                     </td>
+
+                    <td>
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/1199/1199128.png" width="100">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" width="100">
+                        </div>
+                    </td>
+
                 </tr>
             </table>
         </article>
 
         <footer class="pie">
             <div>
-                <p>&copy; Robielys Ortiz 2023</p>
+                <p>&copy; Robielys Ortiz 2024</p>
             </div>
             <div class="iconos">
                 <table>
