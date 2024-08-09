@@ -69,16 +69,17 @@ body {
 @media (max-width: 1280px) {
     .contenedor {
         display: grid;
-        /* 5 filas y 3 columnas */
-        grid-template: auto auto auto auto auto / 20% auto;
-        gap:1px;
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        /* cuatro filas y 3 columnas */
+        grid-template: auto auto auto auto auto auto/ auto auto auto;
+        gap: 1px;
         grid-template-areas:
-            "header header"
-            "menu1 menu1" 
-            "centro izq"
-            "der der"
-            "footer footer" ;
-
+            "header header header"
+            "menu1 menu1 menu1"
+            "img centro der"
+            "abaj abaj abaj"
+            "izq izq izq"
+            "footer footer footer";
     }
 }
 
@@ -89,17 +90,17 @@ body {
 @media (max-width: 600px) {
     .contenedor {
         display: grid;
-        /* 6 filas y 1 columnas */
-        grid-template: auto auto auto auto auto auto / 1fr;
-        gap:1px;
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        /* cuatro filas y 3 columnas */
+        grid-template: auto auto auto auto auto auto/ auto auto auto;
+        gap: 1px;
         grid-template-areas:
-            "header"
-            "menu1"
-            "centro" 
-            "izq"
-            "der"
-            "footer" ;
-
+            "header header header"
+            "menu1 menu1 menu1"
+            "img centro der"
+            "abaj abaj abaj"
+            "izq izq izq"
+            "footer footer footer";
     }
 }
 
@@ -136,6 +137,12 @@ nav li a {
 nav li a:hover {   
     background-color: #c43f91;
     animation: 0.9s infinite botonanim;
+}
+#conoc-li a:hover {
+    background-color: #1b8ffe;
+}
+#pro-li a:hover {
+    background-color: #05bb3b;
 }
 
 @keyframes botonanim {
@@ -201,11 +208,14 @@ fieldset{
     border: none;
 
 }
-.formulario {
+.contenido{
+    display: none;
+
+}
+.formulario2 {
     height: 600px;
     display: flex;
     justify-content: center;
-    
     align-items: center;
 }
 
@@ -292,4 +302,24 @@ h1 {
     .card a .card-description {
         text-decoration: none;
     }
+
+
+.toggle-button {
+    background-color: #83c1fc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    display: none;
 }
+#proy {
+    background-color: #84c798;
+}
+
+
+    .toggle-button.active + .contenido{
+        display: block; /* Mostrar cuando el botón está activo */
+    }

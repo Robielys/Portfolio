@@ -23,9 +23,8 @@
 
         <nav class="barra-menu">
             <ul type="square">
-                <li><a href="#adm">Acerca de mi</a></li>
-                <li> <a href="#conoc">Conocimientos</a></li>
-                <li> <a href="#proy">Proyectos</a></li>
+                <li id="conoc-li"> <a href="#conoc">Conocimientos</a></li>
+                <li id="pro-li"> <a href="#proy">Proyectos</a></li>
                 <li><a href="#red">Redes</a></li>
                 <li><a href="#cont">Contacto</a></li>
 
@@ -33,24 +32,27 @@
         </nav>
 
         <aside class="izquierda">
-            <section class="formulario">
+            <section class="formulario2">
 
                 <form id="cont" action="" class="form">
                     <div class="grupo">
                         <h2 class="titulo2">Dejame tu consulta</h2>
                         <label for="nom">
-                            Nombre</label>
-                            <input type="text" name="nombre" id="nom" placeholder="ejemplo Daniel Gonzales">
+                            Nombre
+                        </label>
+                        <input type="text" name="nombre" id="nom" placeholder="ejemplo Daniel Gonzales">
                     </div>
                     <div class="grupo">
                         <label for="nom">
-                            Email</label>
-                            <input type="text" name="nombre" id="nom" placeholder="ejemlo@gmail.com">
+                            Email
+                        </label>
+                        <input type="text" name="nombre" id="nom" placeholder="ejemlo@gmail.com">
                     </div>
                     <div class="grupo">
                         <label for="nom">
-                            Telefono</label>
-                            <input type="text" name="nombre" id="nom" placeholder="ejemplo 112598743">
+                            Telefono
+                        </label>
+                        <input type="text" name="nombre" id="nom" placeholder="ejemplo 112598743">
                     </div>
                     <div class="grupo">
                         <label for="mensj">Mensaje</label><br>
@@ -64,20 +66,23 @@
 
         <!-- Contenido principal -->
         <article class="principal">
-            <h3 style="color:#61135d; ">Hola 😀</h3>
-            <p> Hola, mi nombre es Robielys Ortiz,</p>
-             <p>soy Programadora, graduada </p>
-             <p> en la UTN Facultad Regional</p>
-             <p> de Pacheco, actualmente soy supervisora del </p>
-             <p>Sistema de control de calidad en una empresa de</p>
-             <p>plástico y como tester de manera freelance..</p>
+            <div >
+                <h3 style="color:#61135d; ">Hola 😀</h3>
+                <p> Hola, mi nombre es Robielys Ortiz,</p>
+                <p>soy Programadora, graduada </p>
+                <p> en la UTN Facultad Regional</p>
+                <p> de Pacheco, actualmente soy supervisora del </p>
+                <p>Sistema de control de calidad en una empresa de</p>
+                <p>plástico y como tester de manera freelance..</p>
+            </div>
         </article>
         <article class="imagen">
             <img class="foto" src="perfil.png">
         </article>
         <article class="abajo">
             <div class="abaj2">
-                <h3 id ="proy" style="color:#61135d; ">Proyectos</h3>
+                <button class="toggle-button" id="proy">Proyectos</button>
+                <div class="contenido" id="proy-content">
                 <div class="card-container">
                     <a href="https://github.com/Robielys/SistemaDeStock" target="_blank" class="card">
                         <img src="https://cdn-icons-png.flaticon.com/512/4947/4947506.png" alt="Proyecto 1">
@@ -96,55 +101,63 @@
                     </a>
                 </div>
             </div>
+            </div>
         </article>
 
-        <article class="derecha">
-            <h3 style="color:#61135d; ">Conocimientos ⚙💻</h3>
-            <table>
-                <tr id="conoc">
-                    <td>
-                        <div><img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" width="100">
-                        </div>
-                    </td>
-                    <td>
-                        <div><img src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png"
-                                width="90"></div>
-                    </td>
-                    <td>
-                        <div><img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png" width="100">
-                        </div>
-                    </td>
-                    <td>
-                        <div><img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" width="100"
+        <article class="derecha" >
+            <button class="toggle-button" id="conoc">Conocimientos</button>
+            <div class="contenido" id="conoc-content" >
+                <table align="center">
+                    <tr >
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" width="100">
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <img src="https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png"
+                                     width="90">
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png" width="100">
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" width="100">
 
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968267.png" width="100">
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968242.png" width="100">
-                        </div>
-                    </td>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968267.png" width="100">
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968242.png" width="100">
+                            </div>
+                        </td>
 
-                    <td>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/1199/1199128.png" width="100">
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" width="100">
-                        </div>
-                    </td>
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/512/1199/1199128.png" width="100">
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" width="100">
+                            </div>
+                        </td>
 
-                </tr>
-            </table>
+                    </tr>
+                </table>
+            </div>
         </article>
 
         <footer class="pie">
@@ -155,18 +168,21 @@
                 <table>
                     <tr id="red">
                         <td>
-                            <a href="https://www.linkedin.com/in/robielys-ortiz-morales/" target="_blank"><img
-                                    src="https://cdn-icons-png.flaticon.com/128/3938/3938061.png" width="40"></a>
+                            <a href="https://www.linkedin.com/in/robielys-ortiz-morales/" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3938/3938061.png" width="40">
+                            </a>
 
                         </td>
                         <td>
-                            <a href="https://github.com/Robielys" target="_blank"><img
-                                    src="https://cdn-icons-png.flaticon.com/128/4926/4926625.png" width="40"></a>
+                            <a href="https://github.com/Robielys" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/128/4926/4926625.png" width="40">
+                            </a>
 
                         </td>
                         <td>
-                            <a href="https://twitter.com/Roby_Ort" target="_blank"><img
-                                    src="https://cdn-icons-png.flaticon.com/128/11823/11823292.png" width="40"></a>
+                            <a href="https://twitter.com/Roby_Ort" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/128/11823/11823292.png" width="40">
+                            </a>
 
                         </td>
                     </tr>
@@ -174,6 +190,43 @@
             </div>
         </footer>
     </div>
+    <script>
+       document.querySelectorAll('.toggle-button').forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const content = button.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+});
+
+document.querySelectorAll('.barra-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado
+
+        const targetId = this.getAttribute('href').slice(1); // Obtener el ID sin '#'
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            // Encontrar el botón toggle asociado al contenido
+            const toggleButton = document.querySelector(`.toggle-button[id="${targetId}"]`);
+            if (toggleButton) {
+                // Mostrar el botón toggle si está oculto
+                toggleButton.style.display = 'block';
+                // Alternar la visibilidad del contenido
+                toggleButton.classList.add('active');
+                targetElement.style.display = 'block';
+            }
+            
+            // Desplazar la página a la sección
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+    </script>
 
 </body>
 
